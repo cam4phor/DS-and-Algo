@@ -28,12 +28,18 @@ A = [1, 2, 3, 4]
 # print(subSets(A))
 
 # Feb 26, 2022
+# start from the first element and 
+# choose to have it in the array(B) or not
+# then splice the array from that element 
+# and move to the next iteration of recursion
+# starting from the first element again
+# when the array becomes empty, append a copy of B
+# to the answer and return.
 def createSubsets(A, B, ans):
     #print(A)
     if(len(A) == 0):
         ans.append(B.copy())
         return
-    
     createSubsets(A[1:], B, ans)
     createSubsets(A[1:], B+[A[0]], ans)
             
