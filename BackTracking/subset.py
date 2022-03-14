@@ -1,4 +1,4 @@
-A = [1, 2, 3, 4]
+A = [1, 2, 2]
 
 # def printSubsets(A, K, P, i, x):
 #     if (i >= len(A)-1):
@@ -40,13 +40,21 @@ def createSubsets(A, B, ans):
     if(len(A) == 0):
         ans.append(B.copy())
         return
-    createSubsets(A[1:], B, ans)
-    createSubsets(A[1:], B+[A[0]], ans)
-            
+    # code to remove duplicates
+    nextElem = 1
+    createSubsets(A[nextElem:], B, ans)
+    createSubsets(A[nextElem:], B+[A[0]], ans)
+
 def subsets(nums):
     ans = []
-    B = []
-    createSubsets(nums, B, ans)
-    return ans
+    B = [[]]
+    # duplicates
+    for i in nums:
+        for j in range(len(B)):
+            B.append(B[j] + [i])
+            
+
+    #createSubsets(nums, B, ans)
+    return B
 
 print(subsets(A))
