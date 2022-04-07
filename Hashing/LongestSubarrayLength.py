@@ -16,7 +16,7 @@ A = [0, 1, 1, 0, 0, 1]
 def FindLCL(A):
   dict_L = {}
   sum = 0
-  max = 0
+  max = -1
   for i in range(len(A)):
     sum += 1 if A[i] == 1 else -1
     if(sum not in dict_L.keys()):
