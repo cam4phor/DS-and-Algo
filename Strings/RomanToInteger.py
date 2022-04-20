@@ -1,3 +1,11 @@
+# April 16,
+# Store the value of roman numerals and numbers in a dictionary
+# if the next number is greater than the current number
+# subtract from value
+# if the next number is less than the current number
+# Add to the value;
+
+
 roman = {
   "I": 1,
   "V": 5,

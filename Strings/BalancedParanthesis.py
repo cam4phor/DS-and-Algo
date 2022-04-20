@@ -1,4 +1,10 @@
 S = '[]]]'
+# easy problem;
+# check for opening braces first and add that into an array
+# match braces and if the closing bracket appears remove a bracket from arr
+# if a closing bracket appears first return 0
+# If at the end of all the array still has something return 0
+# if the array has nothing return 1
 
 def checkIfBalanced(s):
   arr = []

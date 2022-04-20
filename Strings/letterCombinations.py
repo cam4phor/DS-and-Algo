@@ -1,3 +1,19 @@
+# read the string from left to right
+# add the corresponding letters possible
+# with the current letter in an array (tempArr). (add 'abc' for 2)
+# initialize an empty array arr
+# for each value in the tempArr
+# initialize an empty array (again) (arr2)
+# Go through each item "item" in the tempArr (if we have abc we go through a, b and c separately)
+# for each letter go through the entire array "arr"
+# and prepend "item[i]" to each item in the array and add the final string to "arr2"
+# when all items in tempArr and arr are done assign arr2 to arr
+
+
+# we need the final array sorted, so we can use a trick for that
+# when we have "23" as an input, we have ["abc", "def"] as the temp array
+# so the final if we go through the above algorith would be ["da", "db", "dc", "ea", "eb", "ec", "fa", "fb", "fc"]
+# so if we reverse the temp array we'll get the correct sorted order
 
 n = "2347"
 
